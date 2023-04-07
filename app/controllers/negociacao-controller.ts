@@ -5,7 +5,7 @@ import { MensagemView } from "../views/mensagem-view.js";
 import { NegociacoesView } from "../views/negociacoes-view.js";
 
 export class NegociacaoController {
-    private inputData: HTMLInputElement;
+    private inputData: HTMLInputElement ;
     private inputQuantidade: HTMLInputElement;
     private inputValor: HTMLInputElement;
     private negociacoes = new Negociacoes();
@@ -13,9 +13,9 @@ export class NegociacaoController {
     private mensagemView = new MensagemView('#mensagemView')
 
     constructor() {
-        this.inputData = document.querySelector('#data');
-        this.inputQuantidade = document.querySelector('#quantidade');
-        this.inputValor = document.querySelector('#valor');
+        this.inputData = document.querySelector('#data') as HTMLInputElement
+        this.inputQuantidade = document.querySelector('#quantidade')  as HTMLInputElement
+        this.inputValor = document.querySelector('#valor') as HTMLInputElement
         this.negociacoesView.update(this.negociacoes);
     }
 
